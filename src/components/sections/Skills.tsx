@@ -26,7 +26,7 @@ export function Skills() {
           </ScrollReveal>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {CAPABILITIES.map((group, gi) => (
             <ScrollReveal key={group.title} delay={gi * 80}>
               <div className="bg-plum-2 border border-plum-3 hover:border-plum-4 p-6 transition-colors duration-300 h-full">

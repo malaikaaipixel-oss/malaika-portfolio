@@ -10,6 +10,7 @@ export interface Project {
   statusLabel: string;
   featured: boolean;
   liveUrl: string | null;
+  screenshotUrl?: string;
   highlights: string[];
 }
 

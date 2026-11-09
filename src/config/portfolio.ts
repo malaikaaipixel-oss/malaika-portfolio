@@ -63,6 +63,7 @@ export const PROJECTS: Project[] = [
     statusLabel: 'Early Stage · Pilot',
     featured: true,
     liveUrl: 'https://beaconbridge.pk/',
+    screenshotUrl: '/images/projects/beacon-bridge.jpg',
     highlights: [
       'Challenge-based candidate evaluation flows',
       'Graduate and employer-facing interfaces',
@@ -85,6 +86,7 @@ export const PROJECTS: Project[] = [
     statusLabel: 'Concept',
     featured: false,
     liveUrl: 'https://northstar-cafe-six.vercel.app/',
+    screenshotUrl: '/images/projects/northstar-cafe.jpg',
     highlights: [
       'Responsive brand presentation',
       'Interactive menu experience',
@@ -106,6 +108,7 @@ export const PROJECTS: Project[] = [
     statusLabel: 'Prototype',
     featured: false,
     liveUrl: 'https://northstar-ai-three.vercel.app/',
+    screenshotUrl: '/images/projects/northstar-ai.jpg',
     highlights: [
       'Conversational chat interface',
       'Local knowledge-base response engine',
@@ -127,6 +130,7 @@ export const PROJECTS: Project[] = [
     statusLabel: 'Concept',
     featured: false,
     liveUrl: 'https://aura-studio-coral-ten.vercel.app/',
+    screenshotUrl: '/images/projects/aura-studio.jpg',
     highlights: [
       'Editorial web design & typography',
       'Portfolio filtering interface',

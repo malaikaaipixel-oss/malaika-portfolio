@@ -197,6 +197,7 @@ function CaseStudyModal({ project, onClose }: { project: Project; onClose: () =>
           </div>
           <button
             onClick={onClose}
+            autoFocus
             className="w-8 h-8 flex items-center justify-center border border-plum-3 text-lavender-2 hover:text-ivory hover:border-plum-4 transition-colors flex-shrink-0"
             aria-label="Close"
           >
@@ -212,9 +213,18 @@ function CaseStudyModal({ project, onClose }: { project: Project; onClose: () =>
           </span>
         </div>
 
-        {/* Illustration */}
+        {/* Screenshot / Illustration */}
         <div className="mx-6 mt-4 aspect-video bg-plum-2 overflow-hidden border border-plum-3">
-          <ProjectIllustration id={project.id} />
+          {project.screenshotUrl ? (
+            <img
+              src={project.screenshotUrl}
+              alt={`Screenshot of ${project.title} website`}
+              className="w-full h-full object-cover object-top"
+              loading="lazy"
+            />
+          ) : (
+            <ProjectIllustration id={project.id} />
+          )}
         </div>
 
         {/* Body */}
@@ -307,10 +317,19 @@ function FeaturedCard({ project }: { project: Project }) {
               </button>
             </div>
 
-            {/* Illustration */}
+            {/* Screenshot / Illustration */}
             <div className="relative bg-plum-2 overflow-hidden min-h-[220px] lg:min-h-0">
               <div className="absolute inset-0">
-                <ProjectIllustration id={project.id} />
+                {project.screenshotUrl ? (
+                  <img
+                    src={project.screenshotUrl}
+                    alt={`Screenshot of ${project.title} website`}
+                    className="w-full h-full object-cover object-top"
+                    loading="eager"
+                  />
+                ) : (
+                  <ProjectIllustration id={project.id} />
+                )}
               </div>
               <div className="absolute inset-0 bg-plum/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </div>
@@ -336,9 +355,21 @@ function GridCard({ project, delay }: { project: Project; delay: number }) {
   return (
     <>
       <ScrollReveal delay={delay}>
-        <article className="group flex flex-col bg-plum-1 border border-plum-3 hover:border-plum-4 transition-all duration-300 overflow-hidden h-full cursor-pointer">
+        <article
+          className="group flex flex-col bg-plum-1 border border-plum-3 hover:border-plum-4 transition-all duration-300 overflow-hidden h-full cursor-pointer"
+          onClick={() => setOpen(true)}
+        >
           <div className="aspect-video bg-plum-2 relative overflow-hidden flex-shrink-0">
-            <ProjectIllustration id={project.id} />
+            {project.screenshotUrl ? (
+              <img
+                src={project.screenshotUrl}
+                alt={`Screenshot of ${project.title} website`}
+                className="w-full h-full object-cover object-top"
+                loading="lazy"
+              />
+            ) : (
+              <ProjectIllustration id={project.id} />
+            )}
             <div className="absolute inset-0 bg-plum/25 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           </div>
 
@@ -355,7 +386,7 @@ function GridCard({ project, delay }: { project: Project; delay: number }) {
             <p className="font-body text-sm text-lavender-2 leading-relaxed mb-4 flex-1 line-clamp-3">{project.description}</p>
 
             <button
-              onClick={() => setOpen(true)}
+              onClick={(e) => { e.stopPropagation(); setOpen(true); }}
               className="flex items-center gap-1.5 font-body text-sm text-lavender-2 group-hover:text-orchid transition-colors self-start"
             >
               View Case Study

@@ -26,7 +26,7 @@ export function StarRating({ value, onChange, size = 16 }: StarRatingProps) {
               onMouseLeave={() => setHovered(0)}
               aria-label={`Rate ${star} star${star > 1 ? 's' : ''}`}
               aria-pressed={value === star}
-              className="transition-transform hover:scale-110 focus:outline-none"
+              className="transition-transform hover:scale-110"
             >
               <Star
                 size={size}

@@ -3,7 +3,7 @@ import { IDENTITY } from '../../config/portfolio';
 
 export function About() {
   return (
-    <section id="about" className="py-20 lg:py-28 bg-plum-1" aria-label="About">
+    <section id="about" className="py-20 lg:py-28 bg-plum" aria-label="About">
       <div className="max-w-6xl mx-auto px-5 sm:px-8">
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">

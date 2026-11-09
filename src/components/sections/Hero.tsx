@@ -234,7 +234,7 @@ export function Hero() {
         </div>
 
         {/* Scroll hint */}
-        <div className="hidden lg:flex items-center gap-2 mt-14 text-lavender-4">
+        <div className="hidden md:flex items-center gap-2 mt-14 text-lavender-4">
           <div className="scroll-indicator">
             <ChevronDown size={14} />
           </div>

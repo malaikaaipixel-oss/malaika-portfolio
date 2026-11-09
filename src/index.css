@@ -76,12 +76,12 @@
 
   .btn-primary {
     @apply inline-flex items-center gap-2 px-6 py-3 bg-coral text-white font-body font-medium text-sm
-           transition-all duration-200 hover:bg-coral-dark active:scale-[0.98];
+           cursor-pointer transition-all duration-200 hover:bg-coral-dark active:scale-[0.98];
   }
 
   .btn-outline {
     @apply inline-flex items-center gap-2 px-6 py-3 border border-plum-4 text-lavender font-body font-medium text-sm
-           transition-all duration-200 hover:border-orchid/60 hover:text-ivory active:scale-[0.98];
+           cursor-pointer transition-all duration-200 hover:border-orchid/60 hover:text-ivory active:scale-[0.98];
   }
 
   .nav-link {
